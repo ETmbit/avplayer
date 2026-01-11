@@ -211,7 +211,7 @@ namespace AVPlayer {
 
     //% subcategory="Instructies"
     //% block="the number parameter is %num"
-    //% block.loc.nl="de getal-parameter num"
+    //% block.loc.nl="de getal-parameter is %num"
     export function isNumberParam(num: number): boolean {
         return (RPINUM == num)
     }
