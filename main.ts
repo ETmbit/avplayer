@@ -245,9 +245,9 @@ namespace AVPlayer {
         ESerial.write("&" + cmd)
     }
 
-    //% block="wait until the video is ready"
-    //% block.loc.nl="wacht tot de video klaar is"
-    export function waitVideo() {
+    //% block="wait until ready"
+    //% block.loc.nl="wacht op het einde"
+    export function waitReady() {
         while (!READY) basic.pause(1)
     }
 
