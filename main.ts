@@ -191,14 +191,14 @@ namespace AVPlayer {
     //% subcategory="Instructies"
     //% block="the number parameter"
     //% block.loc.nl="de getal-parameter"
-    export function numberValue(): number {
+    export function numberParam(): number {
         return RPINUM
     }
 
     //% subcategory="Instructies"
     //% block="the text parameter"
     //% block.loc.nl="de tekst-parameter"
-    export function textValue(): string {
+    export function textParam(): string {
         return RPITXT
     }
 
@@ -207,6 +207,27 @@ namespace AVPlayer {
     //% block.loc.nl="de instructie"
     export function command(): string {
         return RPIMSG
+    }
+
+    //% subcategory="Instructies"
+    //% block="the number parameter is %num"
+    //% block.loc.nl="de getal-parameter num"
+    export function isNumberParam(num: number): boolean {
+        return (RPINUM == num)
+    }
+
+    //% subcategory="Instructies"
+    //% block="the text parameter is %text"
+    //% block.loc.nl="de tekst-parameter is %text"
+    export function isTextParam(text: string): boolean {
+        return (RPITXT == text)
+    }
+
+    //% subcategory="Instructies"
+    //% block="the command is %command"
+    //% block.loc.nl="de instructie is %command"
+    export function isCommand( command: string): boolean {
+        return (RPIMSG == command)
     }
 
     //% color="#FFC000"
