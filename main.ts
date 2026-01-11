@@ -186,7 +186,7 @@ basic.forever(function () {
 //% color="#FF2266" icon="\uf144"
 //% block="AVPlayer"
 //% block.loc.nl="AVPlayer"
-namespace RPiMedia {
+namespace AVPlayer {
 
     //% subcategory="Instructies"
     //% block="the number parameter"
