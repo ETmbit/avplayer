@@ -270,4 +270,11 @@ namespace AVPlayer {
     export function showStandby() {
         ESerial.write("standby")
     }
+
+    //% block="the standby screen is %name"
+    //% block.loc.nl="het standby-scherm is %name"
+    export function setStandby(name: string) {
+        let msg = "@" + name
+        ESerial.write(msg)
+    }
 }
