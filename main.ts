@@ -261,6 +261,7 @@ namespace AVPlayer {
     //% block="show image %name for %time sec."
     //% block.loc.nl="toon afbeelding %name voor %time sec."
     export function showImage(name: string, time: number) {
+        READY = false
         let msg = name + "|" + time.toString()
         ESerial.write(msg)
     }
@@ -268,6 +269,7 @@ namespace AVPlayer {
     //% block="show the standby screen"
     //% block.loc.nl="toon het standby-scherm"
     export function showStandby() {
+        READY = true // make 'waitReady' superfluous
         ESerial.write("standby")
     }
 
