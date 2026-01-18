@@ -189,37 +189,37 @@ basic.forever(function () {
 namespace AVPlayer {
 
     //% subcategory="Instructies"
-    //% block="the number parameter"
-    //% block.loc.nl="de getal-parameter"
-    export function numberParam(): number {
+    //% block="the value parameter"
+    //% block.loc.nl="de waarde-parameter"
+    export function readValue(): number {
         return RPINUM
     }
 
     //% subcategory="Instructies"
     //% block="the text parameter"
     //% block.loc.nl="de tekst-parameter"
-    export function textParam(): string {
+    export function readText(): string {
         return RPITXT
     }
 
     //% subcategory="Instructies"
     //% block="the command"
     //% block.loc.nl="de instructie"
-    export function command(): string {
+    export function readCommand(): string {
         return RPIMSG
     }
 
     //% subcategory="Instructies"
-    //% block="the number parameter is %num"
-    //% block.loc.nl="de getal-parameter is %num"
-    export function isNumberParam(num: number): boolean {
+    //% block="the value parameter is %num"
+    //% block.loc.nl="de waarde-parameter is %num"
+    export function isValue(num: number): boolean {
         return (RPINUM == num)
     }
 
     //% subcategory="Instructies"
     //% block="the text parameter is %text"
     //% block.loc.nl="de tekst-parameter is %text"
-    export function isTextParam(text: string): boolean {
+    export function isText(text: string): boolean {
         return (RPITXT == text)
     }
 
@@ -241,7 +241,7 @@ namespace AVPlayer {
     //% subcategory="Instructies"
     //% block="give the command %cmd"
     //% block.loc.nl="geef de instructie %cmd"
-    export function setCommand(cmd: string): void {
+    export function doCommand(cmd: string): void {
         ESerial.write("&" + cmd)
     }
 
